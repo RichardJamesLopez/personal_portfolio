@@ -1,4 +1,4 @@
-# Creative Agency Portfolio
+# Personal Portfolio
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
@@ -10,11 +10,6 @@
 This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
 Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
 
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/richardjameslopezs-projects/v0-creative-agency-portfolio](https://vercel.com/richardjameslopezs-projects/v0-creative-agency-portfolio)**
 
 ## Build your app
 
