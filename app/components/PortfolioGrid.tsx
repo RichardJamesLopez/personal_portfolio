@@ -57,7 +57,7 @@ export default function PortfolioGrid() {
   const filteredProjects = filter === "All" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-    <section className="py-20 bg-background">
+    <section id="work" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -118,7 +118,7 @@ export default function PortfolioGrid() {
                   <div className="text-sm font-medium text-primary mb-1">{project.category}</div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                   <a
-                    href="https://www.flowersandsaints.com.au"
+                    href="https://ourmada.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline inline-flex items-center"

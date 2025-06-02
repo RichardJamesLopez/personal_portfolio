@@ -7,14 +7,23 @@ export default function Footer() {
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {["About", "Work", "Services", "Contact", "Privacy", "Terms"].map((item) => (
             <div key={item} className="pb-6">
-              <Link
-                href="https://www.flowersandsaints.com.au"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-              >
-                {item}
-              </Link>
+              {item === "Terms" || item === "Privacy" ? (
+                <Link
+                  href="/terms"
+                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
+                >
+                  {item}
+                </Link>
+              ) : (
+                <Link
+                  href="https://ourmada.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
+                >
+                  {item}
+                </Link>
+              )}
             </div>
           ))}
         </nav>

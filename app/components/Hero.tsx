@@ -36,7 +36,7 @@ export default function Hero() {
               Explore Our Work
             </a>
             <a
-              href="https://www.flowersandsaints.com.au"
+              href="https://ourmada.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold leading-6 text-foreground"

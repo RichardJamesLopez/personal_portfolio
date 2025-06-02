@@ -32,23 +32,19 @@ export default function Header() {
         </div>
         <div className="flex gap-x-12">
           <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#work"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
           >
             Work
           </Link>
           <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#timeline"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
           >
             About
           </Link>
           <Link
-            href="https://www.flowersandsaints.com.au"
+            href="https://ourmada.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
