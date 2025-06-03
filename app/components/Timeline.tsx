@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform, useSpring, useInView } from "framer-mo
 
 const timelineEvents = [
   {
+<<<<<<< HEAD
     year: 2018,
     title: "Flowers & Saints Founded",
     description: "Our journey began with a passion for minimal design and floral artistry.",
@@ -45,6 +46,48 @@ const timelineEvents = [
     description: "Opened our first flagship store in the heart of Sydney.",
     details:
       "Our Bondi Beach location features an immersive retail experience, blending digital installations with a curated selection of floral arrangements and lifestyle products.",
+=======
+    year: 2008,
+    title: "Peace Corps Volunteer",
+    skills: ["Excel"],
+    details:
+      "Learned how to organize and share data while I was teaching English in Mongolia at a middle school and then at an international mining company",
+  },
+  {
+    year: 2012,
+    title: "Graduate School",
+    skills: ["Excel", "R", "VBA"],
+    details:
+      "Earned a Master's degree at Columbia University of New York with a focus on international finance and economics",
+  },
+  {
+    year: 2014,
+    title: "Finance ",
+    skills: ["Excel", "Python", "Pandas", "Javascript", "SQL"],
+    details:
+      "Sharpened financial analytical skills at a bank and hedge fund in New York",
+  },
+  {
+    year: 2018,
+    title: "Tech Companies",
+    skills: ["SQL", "Python", "PyTorch", "Tableau"],
+    details:
+      "Worked at UberEats and Andela in NYC in operations and management roles",
+  },
+  {
+    year: 2020,
+    title: "Blockchain",
+    skills: ["Javascript", "React", "Solidity", "Python"],
+    details:
+      "Ran technical sales and then built out a Sales team in blockchain infrastructure at Pocket Network. Also contributed to the MakerDAO and Arbitrum communities.",
+  },
+  {
+    year: 2023,
+    title: "Founder",
+    skills: ["Javascript", "React", "Next.js"],
+    details:
+      "Built a multi-client SaaS product for both Web2 and Web3 customers",
+>>>>>>> master
   },
 ]
 
@@ -84,7 +127,11 @@ export default function Timeline() {
   })
 
   return (
+<<<<<<< HEAD
     <section ref={containerRef} className="py-20 bg-background overflow-hidden">
+=======
+    <section id="timeline" ref={containerRef} className="py-20 bg-background overflow-hidden">
+>>>>>>> master
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -92,14 +139,23 @@ export default function Timeline() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Our Journey</h2>
           <p className="mt-4 text-lg text-muted-foreground">The evolution of Flowers & Saints through the years</p>
+=======
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">My Journey</h2>
+          { <p className="mt-4 text-lg text-muted-foreground">My professional timeline</p>}
+>>>>>>> master
         </motion.div>
 
         <div className="relative">
           {/* Vertical line */}
           <motion.div
+<<<<<<< HEAD
             className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/20"
+=======
+            className="absolute top-4 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-primary/20 z-0 origin-top"
+>>>>>>> master
             style={{ scaleY: scaleX }}
           />
 
@@ -149,7 +205,11 @@ function TimelineEvent({
       transition={{ duration: 0.8, delay: index * 0.1 }}
     >
       <div className="w-5/12" />
+<<<<<<< HEAD
       <div className="z-20">
+=======
+      <div className="z-10">
+>>>>>>> master
         <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full">
           <div className="w-3 h-3 bg-background rounded-full" />
         </div>
@@ -163,7 +223,17 @@ function TimelineEvent({
         <div className="p-4 bg-background rounded-lg shadow-md border border-primary/10">
           <span className="font-bold text-primary">{event.year}</span>
           <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
+<<<<<<< HEAD
           <p className="text-muted-foreground">{event.description}</p>
+=======
+          <div className="flex flex-wrap gap-2 mb-2">
+            {event.skills && event.skills.map((skill) => (
+              <span key={skill} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+>>>>>>> master
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: isExpanded ? "auto" : 0, opacity: isExpanded ? 1 : 0 }}

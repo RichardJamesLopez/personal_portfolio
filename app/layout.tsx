@@ -8,9 +8,19 @@ import type React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
+<<<<<<< HEAD
   title: "Minimal Creative Agency",
   description: "Apple-inspired design portfolio",
     generator: 'v0.dev'
+=======
+  title: "Rich CL portfolio",
+  description: "Apple-inspired design portfolio",
+  generator: 'v0.dev',
+  icons: {
+    icon: '/Image.png',
+    apple: '/Image.png',
+  },
+>>>>>>> master
 }
 
 export default function RootLayout({

@@ -7,24 +7,43 @@ import Image from "next/image"
 const projects = [
   {
     id: 1,
+<<<<<<< HEAD
     title: "Minimalist Brand Identity",
     description: "Clean and modern visual communication for a tech startup",
     imageUrl: "/placeholder.svg?height=600&width=800",
     category: "Branding",
+=======
+    title: "Web Application",
+    description: "Full multi-client SaaS platform for managing and tracking client projects",
+    imageUrl: "/sample_ourmada.png?height=800&width=600",
+    category: "Web Design",
+>>>>>>> master
   },
   {
     id: 2,
     title: "Sleek Web Experience",
+<<<<<<< HEAD
     description: "Elegant online presence for a luxury fashion brand",
     imageUrl: "/placeholder.svg?height=800&width=600",
+=======
+    description: "Simple wallet explorer for blockchain data",
+    imageUrl: "/sample_wallet.png?height=800&width=600",
+>>>>>>> master
     category: "Web Design",
   },
   {
     id: 3,
+<<<<<<< HEAD
     title: "Intuitive Mobile App",
     description: "User-friendly app design for a health and wellness company",
     imageUrl: "/placeholder.svg?height=600&width=800",
     category: "Mobile App",
+=======
+    title: "ChatGPT prompt generator",
+    description: "ChatGPT wrapper for generating specific AI conversations",
+    imageUrl: "/sample_jargon.png?height=800&width=600",
+    category: "Open Source",
+>>>>>>> master
   },
   {
     id: 4,
@@ -57,7 +76,11 @@ export default function PortfolioGrid() {
   const filteredProjects = filter === "All" ? projects : projects.filter((project) => project.category === filter)
 
   return (
+<<<<<<< HEAD
     <section className="py-20 bg-background">
+=======
+    <section id="work" className="py-20 bg-background">
+>>>>>>> master
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -65,9 +88,15 @@ export default function PortfolioGrid() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Our Work</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             A showcase of our minimalist designs and creative solutions.
+=======
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">My Work</h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            A showcase of various software projects I've worked on.
+>>>>>>> master
           </p>
         </motion.div>
 
@@ -118,7 +147,11 @@ export default function PortfolioGrid() {
                   <div className="text-sm font-medium text-primary mb-1">{project.category}</div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                   <a
+<<<<<<< HEAD
                     href="https://www.flowersandsaints.com.au"
+=======
+                    href="https://ourmada.com"
+>>>>>>> master
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline inline-flex items-center"
