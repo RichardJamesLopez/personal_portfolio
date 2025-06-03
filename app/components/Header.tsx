@@ -5,18 +5,12 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
-<<<<<<< HEAD
-=======
 import { usePathname } from "next/navigation"
->>>>>>> master
 
 export default function Header() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
-<<<<<<< HEAD
-=======
   const pathname = usePathname()
->>>>>>> master
 
   useEffect(() => setMounted(true), [])
 
@@ -30,49 +24,15 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-<<<<<<< HEAD
-            <span className="sr-only">Flowers & Saints</span>
-            <img
-              className="h-8 w-auto"
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/creative-SW6QDQbcVuwPgb6a2CYtYmRbsJa4k1.png"
-              alt="Flowers & Saints Logo"
-=======
             <span className="sr-only">Richard Cuellar-Lopez</span>
             <img
               className="h-8 w-auto"
               src="/Image.png"
               alt="Portfolio Logo"
->>>>>>> master
             />
           </Link>
         </div>
         <div className="flex gap-x-12">
-<<<<<<< HEAD
-          <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            Work
-          </Link>
-          <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            Contact
-          </Link>
-=======
           {pathname !== "/terms" && (
             <>
               <Link
@@ -95,7 +55,6 @@ export default function Header() {
               </Link>
             </>
           )}
->>>>>>> master
         </div>
         <div className="flex flex-1 justify-end">
           {mounted && (

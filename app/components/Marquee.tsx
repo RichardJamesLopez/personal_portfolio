@@ -19,11 +19,7 @@ export default function Marquee() {
                 WebkitTextStroke: "1px rgb(156 163 175)", // tailwind gray-400
               }}
             >
-<<<<<<< HEAD
-              Flowers & Saints
-=======
               Richard Cuellar-Lopez
->>>>>>> master
             </span>
           </div>
         ))}
