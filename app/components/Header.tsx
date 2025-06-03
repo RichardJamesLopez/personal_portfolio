@@ -5,10 +5,12 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
+import { usePathname } from "next/navigation"
 
 export default function Header() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  const pathname = usePathname()
 
   useEffect(() => setMounted(true), [])
 
@@ -25,32 +27,34 @@ export default function Header() {
             <span className="sr-only">Richard Cuellar-Lopez</span>
             <img
               className="h-8 w-auto"
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/creative-SW6QDQbcVuwPgb6a2CYtYmRbsJa4k1.png"
-              alt="Flowers & Saints Logo"
+              src="/Image.png"
+              alt="Portfolio Logo"
             />
           </Link>
         </div>
         <div className="flex gap-x-12">
-          <Link
-            href="#work"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            Work
-          </Link>
-          <Link
-            href="#timeline"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="https://ourmada.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-          >
-            Contact
-          </Link>
+          {pathname !== "/terms" && (
+            <>
+              <Link
+                href="#work"
+                className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
+              >
+                Work
+              </Link>
+              <Link
+                href="#timeline"
+                className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                href="#contact"
+                className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
+              >
+                Contact
+              </Link>
+            </>
+          )}
         </div>
         <div className="flex flex-1 justify-end">
           {mounted && (

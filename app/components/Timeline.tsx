@@ -99,7 +99,7 @@ export default function Timeline() {
         <div className="relative">
           {/* Vertical line */}
           <motion.div
-            className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 h-full bg-primary/20 z-0"
+            className="absolute top-4 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-primary/20 z-0 origin-top"
             style={{ scaleY: scaleX }}
           />
 

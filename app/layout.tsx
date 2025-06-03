@@ -10,7 +10,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Rich CL portfolio",
   description: "Apple-inspired design portfolio",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/Image.png',
+    apple: '/Image.png',
+  },
 }
 
 export default function RootLayout({

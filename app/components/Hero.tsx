@@ -30,15 +30,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a
-              href="#contact"
+              href="#work"
               className="apple-button"
             >
-              Explore Our Work
+              Explore My Work
             </a>
             <a
-              href="https://ourmada.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="text-sm font-semibold leading-6 text-foreground"
             >
               Learn more <span aria-hidden="true">→</span>
@@ -53,7 +51,7 @@ export default function Hero() {
         >
           <div className="relative">
             <img
-              src="/Dalle-scroll-code.png"
+              src="/Image.png"
               alt="Richard Cuellar-Lopez portfolio"
               width={600}
               height={600}
