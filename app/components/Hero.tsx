@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
+
 
 export default function Hero() {
   return (
@@ -50,8 +52,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="relative">
-            <img
-              src="/Image.png"
+            <Image
+              src="/image.png"
               alt="Richard Cuellar-Lopez portfolio"
               width={600}
               height={600}
