@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import Image from "next/Image"
 
 
 export default function Hero() {
@@ -53,7 +53,7 @@ export default function Hero() {
         >
           <div className="relative">
             <Image
-              src="/image.png"
+              src="/Image.png"
               alt="Richard Cuellar-Lopez portfolio"
               width={600}
               height={600}
