@@ -5,10 +5,7 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
-<<<<<<< HEAD
-=======
 import { usePathname } from "next/navigation"
->>>>>>> master
 
 export default function Header() {
   const [mounted, setMounted] = useState(false)

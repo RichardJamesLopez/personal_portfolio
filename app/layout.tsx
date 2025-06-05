@@ -15,7 +15,6 @@ export const metadata = {
     icon: '/Image.png',
     apple: '/Image.png',
   },
-
 }
 
 export default function RootLayout({
