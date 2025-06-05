@@ -7,46 +7,26 @@ import Image from "next/image"
 const projects = [
   {
     id: 1,
-    title: "Minimalist Brand Identity",
-    description: "Clean and modern visual communication for a tech startup",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    category: "Branding",
+    title: "Web Application",
+    description: "Full multi-client SaaS platform for managing and tracking client projects",
+    imageUrl: "/sample_ourmada.png?height=800&width=600",
+    category: "Web Design",
   },
   {
     id: 2,
     title: "Sleek Web Experience",
-    description: "Elegant online presence for a luxury fashion brand",
-    imageUrl: "/placeholder.svg?height=800&width=600",
+    description: "Simple wallet explorer for blockchain data",
+    imageUrl: "/sample_wallet.png?height=800&width=600",
     category: "Web Design",
   },
   {
     id: 3,
-    title: "Intuitive Mobile App",
-    description: "User-friendly app design for a health and wellness company",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    category: "Mobile App",
+    title: "ChatGPT prompt generator",
+    description: "ChatGPT wrapper for generating specific AI conversations",
+    imageUrl: "/sample_jargon.png?height=800&width=600",
+    category: "Open Source",
   },
-  {
-    id: 4,
-    title: "Elegant Digital Campaign",
-    description: "Sophisticated marketing strategy for a luxury automotive brand",
-    imageUrl: "/placeholder.svg?height=800&width=600",
-    category: "Digital Marketing",
-  },
-  {
-    id: 5,
-    title: "Refined UI/UX Design",
-    description: "Streamlined user interfaces for a financial services platform",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    category: "UI/UX",
-  },
-  {
-    id: 6,
-    title: "Minimalist Product Design",
-    description: "Sleek and functional design for a smart home device",
-    imageUrl: "/placeholder.svg?height=800&width=600",
-    category: "Product Design",
-  },
+  
 ]
 
 const categories = ["All", ...new Set(projects.map((project) => project.category))]
@@ -57,8 +37,7 @@ export default function PortfolioGrid() {
   const filteredProjects = filter === "All" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-<<<<<<< HEAD
-    <section className="py-20 bg-background">
+    <section id="work" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -120,7 +99,6 @@ export default function PortfolioGrid() {
                   <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                   <a
                     href="https://ourmada.com"
->>>>>>> master
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline inline-flex items-center"

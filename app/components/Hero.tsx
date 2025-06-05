@@ -13,11 +13,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            <span className="text-gradient">Flowers & Saints</span>
-=======
             <span className="text-gradient">Richard Cuellar-Lopez</span>
->>>>>>> master
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-muted-foreground"
@@ -25,12 +21,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-<<<<<<< HEAD
-            Where minimal design meets floral artistry. We craft elegant experiences that inspire and elevate your
-            space.
-=======
             This is collection of my more technical work in software development.
->>>>>>> master
           </motion.p>
           <motion.div
             className="mt-10 flex items-center gap-x-6"
@@ -39,19 +30,6 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a
-<<<<<<< HEAD
-              href="https://www.flowersandsaints.com.au"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="apple-button"
-            >
-              Explore Our Work
-            </a>
-            <a
-              href="https://www.flowersandsaints.com.au"
-              target="_blank"
-              rel="noopener noreferrer"
-=======
               href="#work"
               className="apple-button"
             >
@@ -59,7 +37,6 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
->>>>>>> master
               className="text-sm font-semibold leading-6 text-foreground"
             >
               Learn more <span aria-hidden="true">→</span>
@@ -74,13 +51,8 @@ export default function Hero() {
         >
           <div className="relative">
             <img
-<<<<<<< HEAD
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/creative-SW6QDQbcVuwPgb6a2CYtYmRbsJa4k1.png"
-              alt="Flowers & Saints design concept"
-=======
               src="/Image.png"
               alt="Richard Cuellar-Lopez portfolio"
->>>>>>> master
               width={600}
               height={600}
               className="w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"

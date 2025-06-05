@@ -58,6 +58,7 @@
     "recharts": "latest",
     "sonner": "latest",
     "tailwind-merge": "latest",
+    "tailwindcss": "3.1.0",
     "tailwindcss-animate": "latest",
     "vaul": "latest",
     "zod": "latest"
@@ -67,7 +68,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "postcss": "latest",
-    "tailwindcss": "latest",
+    "postcss-nesting": "^13.0.1",
     "typescript": "latest"
   }
 }
