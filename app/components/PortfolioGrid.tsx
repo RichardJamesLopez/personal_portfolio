@@ -26,27 +26,7 @@ const projects = [
     imageUrl: "/sample_jargon.png?height=800&width=600",
     category: "Open Source",
   },
-  {
-    id: 4,
-    title: "Elegant Digital Campaign",
-    description: "Sophisticated marketing strategy for a luxury automotive brand",
-    imageUrl: "/placeholder.svg?height=800&width=600",
-    category: "Digital Marketing",
-  },
-  {
-    id: 5,
-    title: "Refined UI/UX Design",
-    description: "Streamlined user interfaces for a financial services platform",
-    imageUrl: "/placeholder.svg?height=600&width=800",
-    category: "UI/UX",
-  },
-  {
-    id: 6,
-    title: "Minimalist Product Design",
-    description: "Sleek and functional design for a smart home device",
-    imageUrl: "/placeholder.svg?height=800&width=600",
-    category: "Product Design",
-  },
+  
 ]
 
 const categories = ["All", ...new Set(projects.map((project) => project.category))]

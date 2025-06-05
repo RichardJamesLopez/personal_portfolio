@@ -22,14 +22,14 @@ export default function Footer() {
                   {item}
                 </Link>
               ) : (
-                <Link
+              <Link
                   href="https://ourmada.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-                >
-                  {item}
-                </Link>
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm leading-6 text-muted-foreground hover:text-foreground"
+              >
+                {item}
+              </Link>
               )}
             </div>
           ))}
