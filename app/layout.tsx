@@ -12,8 +12,12 @@ export const metadata = {
   description: "Apple-inspired design portfolio",
   generator: 'v0.dev',
   icons: {
-    icon: '/Image.png',
-    apple: '/Image.png',
+    icon: [
+      { url: '/Image.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/Image.png', type: 'image/png' },
+    ],
   },
 }
 
