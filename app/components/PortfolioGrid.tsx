@@ -11,6 +11,7 @@ const projects = [
     description: "Full multi-client SaaS platform for managing and tracking client projects",
     imageUrl: "/sample_ourmada.png?height=800&width=600",
     category: "Web Design",
+    link: "https://ourmada.com",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const projects = [
     description: "Simple wallet explorer for blockchain data",
     imageUrl: "/sample_wallet.png?height=800&width=600",
     category: "Web Design",
+    link: "https://www.sightlinescrypto.com/",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const projects = [
     description: "ChatGPT wrapper for generating specific AI conversations",
     imageUrl: "/sample_jargon.png?height=800&width=600",
     category: "Open Source",
+    link: "https://broken-wood-4803.on.fleek.co/",
   },
   
 ]
@@ -80,13 +83,15 @@ export default function PortfolioGrid() {
                 className="bg-background rounded-3xl shadow-lg overflow-hidden hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.imageUrl || "/placeholder.svg"}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 ease-in-out group-hover:scale-105"
-                  />
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={project.imageUrl || "/placeholder.svg"}
+                      alt={project.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    />
+                  </a>
                   <motion.div
                     className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300"
                     whileHover={{ opacity: 1 }}
@@ -98,7 +103,7 @@ export default function PortfolioGrid() {
                   <div className="text-sm font-medium text-primary mb-1">{project.category}</div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                   <a
-                    href="https://ourmada.com"
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline inline-flex items-center"

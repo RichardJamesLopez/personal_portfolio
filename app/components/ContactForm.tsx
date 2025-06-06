@@ -110,7 +110,7 @@ export default function ContactForm() {
                   <FormItem>
                     <FormLabel>Budget</FormLabel>
                     <FormControl>
-                      <Input placeholder="$1,000 - $5,000" {...field} />
+                      <Input placeholder="$1,000 - $100,000" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
