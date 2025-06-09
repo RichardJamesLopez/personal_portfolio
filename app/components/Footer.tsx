@@ -16,20 +16,34 @@ export default function Footer() {
                 </Link>
               ) : item === "Contact" ? (
                 <Link
-                  href="#contact"
+                  href="/#contact"
+                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
+                >
+                  {item}
+                </Link>
+              ) : item === "Work" ? (
+                <Link
+                  href="/#work"
+                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
+                >
+                  {item}
+                </Link>
+              ) : item === "About" ? (
+                <Link
+                  href="/#timeline"
                   className="text-sm leading-6 text-muted-foreground hover:text-foreground"
                 >
                   {item}
                 </Link>
               ) : (
-              <Link
+                <Link
                   href="https://ourmada.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-              >
-                {item}
-              </Link>
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
+                >
+                  {item}
+                </Link>
               )}
             </div>
           ))}
