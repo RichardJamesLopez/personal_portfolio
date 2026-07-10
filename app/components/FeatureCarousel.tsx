@@ -5,26 +5,20 @@ import { motion, useAnimation, useMotionValue } from "framer-motion"
 
 const features = [
   {
-    title: "Minimal Design",
+    title: "Minimal",
     description: "Clean aesthetics that put your content in the spotlight.",
     icon: "✨",
   },
   {
-    title: "Quick Prototypes",
+    title: "Quick",
     description: "Easy to launch versions of your software to be tested with actual users.",
-    icon: "📱",
-  },
-  {
-    title: "Fast Performance",
-    description: "Lightning-quick load times for smooth user interactions.",
     icon: "⚡",
   },
   {
-    title: "Accessibility",
-    description: "Inclusive design practices for all users.",
+    title: "Interactive",
+    description: "Playful, engaging UI/UX details that make products feel fun to explore and easy to use.",
     icon: "🌈",
   },
-  
 ]
 
 export default function FeatureCarousel() {
@@ -51,7 +45,7 @@ export default function FeatureCarousel() {
   return (
     <div className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Core Principles</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Core Values</h2>
         <motion.div ref={carousel} className="cursor-grab overflow-hidden">
           <motion.div
             drag="x"
@@ -62,7 +56,7 @@ export default function FeatureCarousel() {
             onDragEnd={handleDragEnd}
             className="flex"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div
                   key={index}

@@ -9,8 +9,8 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
 import { usePathname } from "next/navigation"
 
 const navItems = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#timeline" },
+  { label: "Work", href: "/#work" },
+  { label: "About Me", href: "/about" },
 ]
 
 export default function Header() {
@@ -22,11 +22,16 @@ export default function Header() {
   useEffect(() => setMounted(true), [])
 
   useEffect(() => {
-    const hash = window.location.hash
-    if (hash && navItems.some((item) => item.href === hash)) {
-      setActiveTab(hash)
+    if (pathname === "/about") {
+      setActiveTab("/about")
+      return
     }
-  }, [])
+
+    const hash = window.location.hash
+    if (hash === "#work") {
+      setActiveTab("/#work")
+    }
+  }, [pathname])
 
   return (
     <motion.header
