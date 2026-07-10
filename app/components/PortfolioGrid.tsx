@@ -29,7 +29,14 @@ const projects = [
     category: "Open Source",
     link: "https://broken-wood-4803.on.fleek.co/",
   },
-  
+  {
+    id: 4,
+    title: "Thought API",
+    description: "Open-source API for agent-driven opinion and market research workflows",
+    imageUrl: "/thought-api-github.png",
+    category: "Open Source",
+    link: "https://github.com/RichardJamesLopez/thought-api",
+  },
 ]
 
 const categories = ["All", ...new Set(projects.map((project) => project.category))]

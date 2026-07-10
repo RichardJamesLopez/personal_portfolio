@@ -23,7 +23,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            This is collection of my more technical work in software development.
+            This is collection of my more technical work in software product development.
           </motion.p>
           <motion.div
             className="mt-10 flex items-center gap-x-6"
