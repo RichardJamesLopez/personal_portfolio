@@ -80,7 +80,7 @@ export default function PortfolioGrid() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-background rounded-3xl shadow-lg overflow-hidden hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10"
+                className="bg-secondary/40 rounded-3xl overflow-hidden hover-lift transition-all duration-300 ease-in-out"
               >
                 <div className="relative h-64 overflow-hidden">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">

@@ -8,12 +8,25 @@ import { motion } from "framer-motion"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
 import { usePathname } from "next/navigation"
 
+const navItems = [
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#timeline" },
+]
+
 export default function Header() {
   const [mounted, setMounted] = useState(false)
+  const [activeTab, setActiveTab] = useState(navItems[0].href)
   const { theme, setTheme } = useTheme()
   const pathname = usePathname()
 
   useEffect(() => setMounted(true), [])
+
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash && navItems.some((item) => item.href === hash)) {
+      setActiveTab(hash)
+    }
+  }, [])
 
   return (
     <motion.header
@@ -36,30 +49,31 @@ export default function Header() {
             />
           </Link>
         </div>
-        <div className="flex gap-x-12">
-          {pathname !== "/terms" && (
-            <>
+        {pathname !== "/terms" && (
+          <div className="flex items-center rounded-full bg-muted p-1">
+            {navItems.map((item) => (
               <Link
-                href="#work"
-                className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
+                key={item.href}
+                href={item.href}
+                onClick={() => setActiveTab(item.href)}
+                className={`relative rounded-full px-4 py-1.5 text-sm leading-6 transition-colors ${
+                  activeTab === item.href
+                    ? "font-semibold text-foreground"
+                    : "font-medium text-muted-foreground hover:text-foreground"
+                }`}
               >
-                Work
+                {activeTab === item.href && (
+                  <motion.span
+                    layoutId="header-nav-pill"
+                    className="absolute inset-0 rounded-full bg-background shadow-sm"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+                  />
+                )}
+                <span className="relative z-10">{item.label}</span>
               </Link>
-              <Link
-                href="#timeline"
-                className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="#contact"
-                className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
-              >
-                Contact
-              </Link>
-            </>
-          )}
-        </div>
+            ))}
+          </div>
+        )}
         <div className="flex flex-1 justify-end">
           {mounted && (
             <button

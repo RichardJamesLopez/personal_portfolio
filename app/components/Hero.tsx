@@ -57,7 +57,7 @@ export default function Hero() {
               alt="Richard Cuellar-Lopez portfolio"
               width={600}
               height={600}
-              className="w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"
+              className="w-[500px]"
             />
           </div>
         </motion.div>
