@@ -49,7 +49,7 @@ export default function FeatureCarousel() {
   }
 
   return (
-    <div className="py-20 bg-gradient-to-b from-background to-secondary/20">
+    <div className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Core Principles</h2>
         <motion.div ref={carousel} className="cursor-grab overflow-hidden">
@@ -66,7 +66,7 @@ export default function FeatureCarousel() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="p-8 bg-background rounded-3xl shadow-lg flex flex-col hover-lift transition-all duration-300 ease-in-out border-2 border-transparent hover:border-primary/10 h-full"
+                  className="p-8 bg-secondary/40 rounded-3xl flex flex-col transition-colors duration-300 ease-in-out hover:bg-secondary/60 h-full"
                 >
                   <div>
                     <div className="text-4xl mb-4">{feature.icon}</div>

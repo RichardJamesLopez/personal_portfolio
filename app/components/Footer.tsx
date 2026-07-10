@@ -3,54 +3,17 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-        <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-          {["Work", "About", "Contact", "Privacy", "Terms"].map((item) => (
-            <div key={item} className="pb-6">
-              {item === "Terms" || item === "Privacy" ? (
-                <Link
-                  href="/terms"
-                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-                >
-                  {item}
-                </Link>
-              ) : item === "Contact" ? (
-                <Link
-                  href="/#contact"
-                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-                >
-                  {item}
-                </Link>
-              ) : item === "Work" ? (
-                <Link
-                  href="/#work"
-                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-                >
-                  {item}
-                </Link>
-              ) : item === "About" ? (
-                <Link
-                  href="/#timeline"
-                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-                >
-                  {item}
-                </Link>
-              ) : (
-                <Link
-                  href="https://ourmada.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm leading-6 text-muted-foreground hover:text-foreground"
-                >
-                  {item}
-                </Link>
-              )}
-            </div>
-          ))}
-        </nav>
-        <p className="mt-10 text-center text-sm leading-5 text-muted-foreground">
-          Designed & Developed with V0 templates. Copyright Richard Cuellar-Lopez
-        </p>
+      <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+        <div className="flex items-center justify-center gap-x-4 text-sm text-muted-foreground">
+          <span>&copy; {new Date().getFullYear()} Richard Cuellar-Lopez</span>
+          <span aria-hidden="true">&middot;</span>
+          <Link href="/terms" className="hover:text-foreground transition-colors">
+            Privacy
+          </Link>
+          <Link href="/terms" className="hover:text-foreground transition-colors">
+            Terms
+          </Link>
+        </div>
       </div>
     </footer>
   )
