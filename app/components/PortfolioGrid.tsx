@@ -37,6 +37,22 @@ const projects = [
     category: "Open Source",
     link: "https://github.com/RichardJamesLopez/thought-api",
   },
+  {
+    id: 5,
+    title: "Warmup Pitches",
+    description: "One-liner builder that helps founders describe their business",
+    imageUrl: "/warmup-pitches-one-liner.png",
+    category: "Web Design",
+    link: "https://home.warmuppitches.com/activity",
+  },
+  {
+    id: 6,
+    title: "Polymarket Bot Analysis",
+    description: "Analysis tool for open Polymarkets",
+    imageUrl: "/poly-gold-analysis.png",
+    category: "Web Design",
+    link: "https://poly-gold.vercel.app/",
+  },
 ]
 
 const categories = ["All", ...new Set(projects.map((project) => project.category))]
