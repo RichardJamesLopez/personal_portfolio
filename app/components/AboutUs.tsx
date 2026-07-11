@@ -16,15 +16,12 @@ export default function AboutUs() {
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <h3 className="text-3xl font-bold mb-4 text-white">We are Creative Innovators</h3>
+            <h3 className="text-3xl font-bold mb-4 text-white">Call me Richard</h3>
             <p className="text-gray-300 mb-6">
-              At CreativeAgency, we blend cutting-edge technology with artistic vision to create digital experiences
-              that captivate and inspire. Our team of passionate designers, developers, and strategists work tirelessly
-              to push the boundaries of what's possible in the digital realm.
+              I'm a builder at heart who wants to work with the best people, hit ultra high growth goals, and raise the bar for what we expect from our digital products. 
             </p>
             <p className="text-gray-300">
-              With a focus on innovation and user-centric design, we've helped countless brands transform their digital
-              presence and connect with their audience in meaningful ways.
+              See below for my timeline. 
             </p>
           </motion.div>
           <motion.div
