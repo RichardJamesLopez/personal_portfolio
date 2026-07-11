@@ -3,34 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-
-const projects = [
-  {
-    id: 1,
-    title: "Web Application",
-    description: "Full multi-client SaaS platform for managing and tracking client projects",
-    imageUrl: "/sample_ourmada.png?height=800&width=600",
-    category: "Web Design",
-    link: "https://ourmada.com",
-  },
-  {
-    id: 2,
-    title: "Sleek Web Experience",
-    description: "Simple wallet explorer for blockchain data",
-    imageUrl: "/sample_wallet.png?height=800&width=600",
-    category: "Web Design",
-    link: "https://www.sightlinescrypto.com/",
-  },
-  {
-    id: 3,
-    title: "ChatGPT prompt generator",
-    description: "ChatGPT wrapper for generating specific AI conversations",
-    imageUrl: "/sample_jargon.png?height=800&width=600",
-    category: "Open Source",
-    link: "https://broken-wood-4803.on.fleek.co/",
-  },
-  
-]
+import { projects } from "../data/projects"
 
 const categories = ["All", ...new Set(projects.map((project) => project.category))]
 
@@ -87,9 +60,9 @@ export default function PortfolioGrid() {
                     <Image
                       src={project.imageUrl || "/placeholder.svg"}
                       alt={project.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                     />
                   </a>
                   <motion.div

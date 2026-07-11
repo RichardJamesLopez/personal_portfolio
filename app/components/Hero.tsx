@@ -1,16 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
-
+import HeroCardStack from "./HeroCardStack"
 
 export default function Hero() {
   return (
     <div className="relative isolate overflow-hidden bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0">
           <motion.h1
-            className="mt-10 text-4xl font-bold tracking-tight text-foreground sm:text-6xl"
+            className="mt-6 break-words text-3xl font-bold tracking-tight text-foreground sm:mt-10 sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -18,12 +17,12 @@ export default function Hero() {
             <span className="text-gradient">Richard Cuellar-Lopez</span>
           </motion.h1>
           <motion.p
-            className="mt-6 text-lg leading-8 text-muted-foreground"
+            className="mt-6 max-w-sm text-base leading-8 text-muted-foreground sm:text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            This is collection of my more technical work in software development.
+            This is collection of my more technical work in software product development.
           </motion.p>
           <motion.div
             className="mt-10 flex items-center gap-x-6"
@@ -46,20 +45,12 @@ export default function Hero() {
           </motion.div>
         </div>
         <motion.div
-          className="mx-auto mt-16 lg:mt-0"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mx-auto mt-10 w-full sm:mt-16 lg:mt-0 lg:flex lg:justify-end"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
         >
-          <div className="relative">
-            <Image
-              src="/Image.png"
-              alt="Richard Cuellar-Lopez portfolio"
-              width={600}
-              height={600}
-              className="w-[500px]"
-            />
-          </div>
+          <HeroCardStack />
         </motion.div>
       </div>
     </div>
