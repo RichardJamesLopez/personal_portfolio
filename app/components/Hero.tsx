@@ -45,7 +45,7 @@ export default function Hero() {
           </motion.div>
         </div>
         <motion.div
-          className="mx-auto mt-10 w-full sm:mt-16 lg:mt-0 lg:flex lg:justify-end"
+          className="mx-auto mt-10 w-full sm:mt-16 lg:mt-0 lg:flex lg:justify-start"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}

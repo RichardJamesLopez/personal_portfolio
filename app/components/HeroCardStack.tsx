@@ -9,7 +9,6 @@ import { projects, type Project } from "../data/projects"
 const visibleCardCount = 5
 
 function getStackStyle(index: number, prefersReducedMotion: boolean, isCompact: boolean) {
-  const xScale = isCompact ? 0.65 : 1
   const yScale = isCompact ? 0.75 : 1
 
   if (index === 0) {
@@ -17,16 +16,16 @@ function getStackStyle(index: number, prefersReducedMotion: boolean, isCompact: 
   }
 
   if (index === 1) {
-    return { x: 32 * xScale, y: -12 * yScale, scale: 0.9, rotate: 2, opacity: 1 }
+    return { x: 0, y: -12 * yScale, scale: 0.9, rotate: 2, opacity: 1 }
   }
 
   if (index === 2) {
-    return { x: 48 * xScale, y: 0, scale: 0.85, rotate: 4, opacity: 1 }
+    return { x: 0, y: 0, scale: 0.85, rotate: 4, opacity: 1 }
   }
 
   if (index < visibleCardCount) {
     return {
-      x: Math.min(62 + (index - 3) * 12, 82) * xScale,
+      x: 0,
       y: (12 + (index - 3) * 8) * yScale,
       scale: Math.max(0.8 - (index - 3) * 0.02, 0.78),
       rotate: Math.min(7 + (index - 3) * 2, 10),
@@ -35,7 +34,7 @@ function getStackStyle(index: number, prefersReducedMotion: boolean, isCompact: 
   }
 
   return {
-    x: prefersReducedMotion ? 0 : 84 * xScale,
+    x: 0,
     y: prefersReducedMotion ? 0 : 22 * yScale,
     scale: 0.76,
     rotate: prefersReducedMotion ? 0 : 10,
@@ -139,7 +138,7 @@ export default function HeroCardStack() {
 
   return (
     <div
-      className="relative mx-auto flex w-full max-w-[320px] flex-col items-center outline-none sm:max-w-[430px]"
+      className="relative mx-auto flex w-full max-w-[320px] flex-col items-start outline-none sm:max-w-[430px]"
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"
@@ -160,6 +159,7 @@ export default function HeroCardStack() {
               style={{
                 zIndex: orderedProjects.length - index,
                 pointerEvents: isVisibleCard ? "auto" : "none",
+                transformOrigin: "left center",
               }}
               animate={stackStyle}
               transition={
@@ -190,7 +190,7 @@ export default function HeroCardStack() {
                 alt={project.title}
                 fill
                 sizes="(min-width: 640px) 323px, 220px"
-                className="object-cover"
+                className="object-cover object-left"
                 priority={isFrontCard}
               />
               <div className="absolute inset-x-0 bottom-0 flex flex-col items-start justify-end gap-2 p-4 sm:p-5">
