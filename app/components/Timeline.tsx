@@ -256,7 +256,7 @@ function TimelineEvent({
         aria-expanded={isExpanded}
         aria-controls={detailsId}
       >
-        <div className="p-4 bg-background rounded-lg shadow-md border border-primary/10">
+        <div className="px-4 pb-4 pt-[1.2rem] bg-background rounded-lg shadow-md border border-primary/10">
           <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-3">
             <div className="shrink-0">
               <span className="font-bold text-primary">{event.year}</span>
