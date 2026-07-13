@@ -66,8 +66,8 @@ const timelineEvents: TimelineEventData[] = [
       {
         name: "Protégé Partners",
         src: "/logos/timeline/protege-partners.svg",
-        width: 240,
-        height: 48,
+        width: 181,
+        height: 54,
       },
     ],
   },
@@ -87,8 +87,8 @@ const timelineEvents: TimelineEventData[] = [
       {
         name: "Andela",
         src: "/logos/timeline/andela.png",
-        width: 366,
-        height: 142,
+        width: 214,
+        height: 60,
       },
     ],
   },
@@ -230,14 +230,14 @@ function TimelineEvent({
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
     >
-      <div className="hidden w-5/12 md:block" />
+      <div className="hidden md:block md:w-[46%]" />
       <div className="absolute left-0 z-10 md:static">
         <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full">
           <div className="w-3 h-3 bg-background rounded-full" />
         </div>
       </div>
       <motion.div
-        className="w-full cursor-pointer rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background md:w-5/12"
+        className="w-full cursor-pointer rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background md:w-[46%]"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onToggle}
@@ -248,26 +248,26 @@ function TimelineEvent({
         aria-controls={detailsId}
       >
         <div className="p-4 bg-background rounded-lg shadow-md border border-primary/10">
-          <span className="font-bold text-primary">{event.year}</span>
-          <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
-          {event.logos && event.logos.length > 0 && (
-            <div className="mb-3 flex flex-wrap gap-2" aria-label="Organizations">
-              {event.logos.map((logo) => (
-                <div
-                  key={logo.name}
-                  className="flex min-h-14 min-w-[7.5rem] flex-1 items-center justify-center rounded-md border border-slate-200 bg-white px-3 py-2 shadow-sm"
-                >
+          <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-3">
+            <div className="mr-auto shrink-0">
+              <span className="font-bold text-primary">{event.year}</span>
+              <h3 className="text-lg font-semibold">{event.title}</h3>
+            </div>
+            {event.logos && event.logos.length > 0 && (
+              <div className="flex flex-wrap items-center gap-4 sm:justify-end" aria-label="Organizations">
+                {event.logos.map((logo) => (
                   <Image
+                    key={logo.name}
                     src={logo.src}
                     alt={logo.name}
                     width={logo.width}
                     height={logo.height}
-                    className="h-auto max-h-8 w-auto max-w-full object-contain"
+                    className={`h-auto max-h-14 w-auto object-contain ${event.logos.length > 1 ? "max-w-[11rem]" : "max-w-full sm:max-w-[22rem]"}`}
                   />
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2 mb-2">
             {event.skills.map((skill) => (
               <span key={skill} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
