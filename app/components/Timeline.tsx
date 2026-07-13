@@ -9,6 +9,7 @@ type TimelineLogo = {
   src: string
   width: number
   height: number
+  displayWidth: number
 }
 
 type TimelineEventData = {
@@ -32,6 +33,7 @@ const timelineEvents: TimelineEventData[] = [
         src: "/logos/timeline/peace-corps.svg",
         width: 720,
         height: 720,
+        displayWidth: 80,
       },
     ],
   },
@@ -47,6 +49,7 @@ const timelineEvents: TimelineEventData[] = [
         src: "/logos/timeline/columbia.svg",
         width: 357,
         height: 55,
+        displayWidth: 320,
       },
     ],
   },
@@ -62,12 +65,14 @@ const timelineEvents: TimelineEventData[] = [
         src: "/logos/timeline/morgan-stanley.svg",
         width: 1000,
         height: 144,
+        displayWidth: 176,
       },
       {
         name: "Protégé Partners",
         src: "/logos/timeline/protege-partners.svg",
         width: 181,
         height: 54,
+        displayWidth: 176,
       },
     ],
   },
@@ -83,12 +88,14 @@ const timelineEvents: TimelineEventData[] = [
         src: "/logos/timeline/uber.svg",
         width: 927,
         height: 322,
+        displayWidth: 176,
       },
       {
         name: "Andela",
         src: "/logos/timeline/andela.png",
         width: 214,
         height: 60,
+        displayWidth: 176,
       },
     ],
   },
@@ -104,12 +111,14 @@ const timelineEvents: TimelineEventData[] = [
         src: "/logos/timeline/pocket-network.svg",
         width: 690,
         height: 177,
+        displayWidth: 230,
       },
       {
         name: "Arbitrum",
         src: "/logos/timeline/arbitrum.svg",
         width: 1080,
         height: 1219,
+        displayWidth: 76,
       },
     ],
   },
@@ -249,12 +258,12 @@ function TimelineEvent({
       >
         <div className="p-4 bg-background rounded-lg shadow-md border border-primary/10">
           <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-3">
-            <div className="mr-auto shrink-0">
+            <div className="shrink-0">
               <span className="font-bold text-primary">{event.year}</span>
               <h3 className="text-lg font-semibold">{event.title}</h3>
             </div>
             {event.logos && event.logos.length > 0 && (
-              <div className="flex flex-wrap items-center gap-4 sm:justify-end" aria-label="Organizations">
+              <div className="flex min-w-0 flex-1 flex-nowrap items-center justify-center gap-4" aria-label="Organizations">
                 {event.logos.map((logo) => (
                   <Image
                     key={logo.name}
@@ -262,7 +271,8 @@ function TimelineEvent({
                     alt={logo.name}
                     width={logo.width}
                     height={logo.height}
-                    className={`h-auto max-h-14 w-auto object-contain ${event.logos.length > 1 ? "max-w-[11rem]" : "max-w-full sm:max-w-[22rem]"}`}
+                    className="h-auto min-w-0 max-w-full object-contain"
+                    style={{ width: logo.displayWidth }}
                   />
                 ))}
               </div>
