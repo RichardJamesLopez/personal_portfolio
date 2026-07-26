@@ -20,7 +20,7 @@ const storySections = [
       "Writing a paper on mining in Tanzania  taught me that sometimes it is easier to act than to keep asking for permission. I had planned to write paper about tanzanite mining for months but every professor/expert/contact directed me toward more permits, special travel visas, and additional people I supposedly needed to consult. Their advice made the project feel far more complicated than it needed to be. Honestly, if I had tried to write the paper in a conventional way, it would have over produced, sub-par, and not a memorable experience at all.",
   },
   {
-    title: "All too often, life is simple",
+    title: "All too often, choices are simple",
     body:
       "After reading an article that mentioned a specific mining town, I found it on a map and became resolute to just go there directly during spring break. I soon found out that foreigners seldom traveled to the site, but shortly after I arrived, several people noticed me and were excited to show me what the local economy around mining was about. In exchange for covering a few meals, I spent a week exploring the site, descending into a mine to see uncovered minearls, extracting the raw tanzanite, and learning firsthand how it was sourced and priced.",
   },
