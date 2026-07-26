@@ -14,10 +14,12 @@ const navItems = [
 ]
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false)
-  const [activeTab, setActiveTab] = useState(navItems[0].href)
-  const { theme, setTheme } = useTheme()
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+  const [activeTab, setActiveTab] = useState<string | null>(
+    pathname === "/about" ? "/about" : pathname === "/" ? "/#work" : null,
+  )
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => setMounted(true), [])
 
@@ -27,10 +29,12 @@ export default function Header() {
       return
     }
 
-    const hash = window.location.hash
-    if (hash === "#work") {
+    if (pathname === "/") {
       setActiveTab("/#work")
+      return
     }
+
+    setActiveTab(null)
   }, [pathname])
 
   return (
