@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Chazen Institute advanced studies award photo placeholder</title>
+  <desc id="desc">Replace this file with a photo for the Chazen Institute advanced studies award.</desc>
+  <rect width="1400" height="1050" fill="#eef2f7"/>
+  <rect x="56" y="56" width="1288" height="938" rx="32" fill="none" stroke="#000d74" stroke-width="6" stroke-dasharray="26 24"/>
+  <text x="700" y="486" fill="#151827" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" text-anchor="middle">Advanced Studies Photo</text>
+  <text x="700" y="562" fill="#535d77" font-family="Arial, Helvetica, sans-serif" font-size="32" text-anchor="middle">Chazen Institute</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Lake Forest College Senior 25 award photo placeholder</title>
+  <desc id="desc">Replace this file with a photo for the Lake Forest College Senior 25 award.</desc>
+  <rect width="1400" height="1050" fill="#f4f1eb"/>
+  <rect x="56" y="56" width="1288" height="938" rx="32" fill="none" stroke="#9a1f2f" stroke-width="6" stroke-dasharray="26 24"/>
+  <text x="700" y="486" fill="#1d1b19" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" text-anchor="middle">Senior 25 Photo</text>
+  <text x="700" y="562" fill="#6f6258" font-family="Arial, Helvetica, sans-serif" font-size="32" text-anchor="middle">Lake Forest College</text>
+</svg>
