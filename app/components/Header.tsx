@@ -10,7 +10,6 @@ import { usePathname } from "next/navigation"
 
 const navItems = [
   { label: "Work", href: "/#work" },
-  { label: "Awards", href: "/awards" },
   { label: "About Me", href: "/about" },
 ]
 
@@ -18,14 +17,14 @@ export default function Header() {
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
   const [activeTab, setActiveTab] = useState<string | null>(
-    pathname === "/about" ? "/about" : pathname === "/awards" ? "/awards" : pathname === "/" ? "/#work" : null,
+    pathname === "/about" ? "/about" : pathname === "/" ? "/#work" : null,
   )
   const { theme, setTheme } = useTheme()
 
   useEffect(() => setMounted(true), [])
 
   useEffect(() => {
-    if (pathname === "/about" || pathname === "/awards") {
+    if (pathname === "/about") {
       setActiveTab(pathname)
       return
     }
