@@ -167,11 +167,15 @@ export default function SuccessStoryPage() {
       </section>
 
       <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-5xl px-6 py-16 text-center sm:py-20 lg:px-8">
-          <blockquote className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl sm:leading-tight">
-            You don’t need to wait for permission to succeed
-          </blockquote>
-          - Ayn Rand
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-16 text-center sm:py-20 lg:px-8">
+          <p className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl sm:leading-tight">
+            A simple goal in life
+          </p>
+          <img
+            src="/closing-giphy.gif"
+            alt="Animated closing GIF"
+            className="w-full max-w-2xl rounded-lg object-cover shadow-sm"
+          />
         </div>
       </section>
     </article>
