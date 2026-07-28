@@ -14,8 +14,8 @@ const awards = [
     year: "Campus impact",
     logo: "/awards/logos/lake-forest-college.png",
     logoAlt: "Lake Forest College logo",
-    photo: "/awards/photos/lake-forest-senior-25.svg",
-    photoAlt: "Placeholder for a Lake Forest College Senior 25 award photo",
+    photo: "/awards/photos/lake-forest-college-award.jpg",
+    photoAlt: "Aerial view of Lake Forest College campus",
     summary:
       "Selected for Senior 25, an honor for students who made the most meaningful impact on campus.",
     details:
@@ -27,8 +27,8 @@ const awards = [
     year: "Public service",
     logo: "/awards/logos/peace-corps.svg",
     logoAlt: "Peace Corps logo",
-    photo: "/awards/photos/franklin-h-williams-award.svg",
-    photoAlt: "Placeholder for a Peace Corps Franklin H. Williams Award photo",
+    photo: "/awards/photos/franklin-williams-award.jpg",
+    photoAlt: "Franklin H. Williams Award presentation ceremony",
     summary:
       "Recipient of the Franklin H. Williams Award for civic engagement and continued public service values after Peace Corps service.",
     details:
@@ -40,8 +40,8 @@ const awards = [
     year: "Advanced studies",
     logo: "/awards/logos/columbia-business-school.svg",
     logoAlt: "Columbia Business School logo",
-    photo: "/awards/photos/chazen-institute-advanced-studies.svg",
-    photoAlt: "Placeholder for a Chazen Institute advanced studies award photo",
+    photo: "/awards/photos/chazen-institute-award.jpg",
+    photoAlt: "Richard Cuellar-Lopez waving in winter clothing in Mongolia",
     summary:
       "Award recipient through the Chazen Institute at Columbia Business School for advanced studies.",
     details:
@@ -128,7 +128,7 @@ export default function AwardsPage() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Recognition</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Impact in three settings
+              Impact in my work
             </h2>
           </div>
 
@@ -148,7 +148,7 @@ export default function AwardsPage() {
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{award.year}</p>
                   <h3 className="mt-2 text-xl font-semibold text-foreground">{award.title}</h3>
                   <p className="mt-3 text-lg leading-8 text-muted-foreground">{award.summary}</p>
-                  <p className="mt-3 text-base leading-7 text-muted-foreground">{award.details}</p>
+                  <p className="mt-3 text-base leading-7 text-foreground">{award.details}</p>
                 </div>
               </section>
             ))}
@@ -157,10 +157,15 @@ export default function AwardsPage() {
       </section>
 
       <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-5xl px-6 py-16 text-center sm:py-20 lg:px-8">
-          <blockquote className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl sm:leading-tight">
-            Recognition follows from doing work that matters to people around you.
-          </blockquote>
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-16 text-center sm:py-20 lg:px-8">
+          <p className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl sm:leading-tight">
+            A simple goal in life
+          </p>
+          <img
+            src="/closing-giphy.gif"
+            alt="Animated closing GIF"
+            className="w-full max-w-2xl rounded-lg object-cover shadow-sm"
+          />
         </div>
       </section>
     </article>
